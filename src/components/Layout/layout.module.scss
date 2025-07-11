@@ -1,0 +1,26 @@
+$border: 1px solid rgba(5, 5, 5, 0.06);
+
+.layout {
+  height: 100%;
+}
+
+.sider {
+  height: 100%;
+  border-right: $border;
+  color: #262626;
+  .menu {
+    border-inline-end: none !important;
+  }
+  .usMenu {
+    :global(.ant-menu-title-content) {
+      transition: none !important;
+    }
+  }
+}
+
+.content {
+  padding: 12px 40px;
+  background-color: #fff;
+  height: 100vh;
+  overflow: auto;
+}

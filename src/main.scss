@@ -1,0 +1,45 @@
+// @import 'antd/dist/antd.css';
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ant-form-item-extra {
+  font-size: 12px !important;
+}
+
+.ant-input-prefix {
+  color: #00000073 !important;
+}
+
+.ant-modal-header {
+  margin-bottom: 24px !important;
+}
+
+// 设置滚动条宽度为 4px 背景色为 #0000000a 不能一直展示滚动条，有的时候才展示
+
+// 基础滚动条样式
+::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+// 滚动条滑块
+::-webkit-scrollbar-thumb {
+  background-color: #0000000a;
+  border-radius: 4px;
+
+  // 只在hover时显示
+  &:hover {
+    background-color: #0000001a;
+  }
+}

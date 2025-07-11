@@ -1,0 +1,9 @@
+{
+  "documents": [
+       {
+      "namespace": "EpLlm",
+      "url": "https://ep-llm-test.zhenguanyu.com/gateway-cn-test/api/swagger/v2/api-docs?_debug_ldap_=fankai",
+      "filename": "ep-llm.ts"
+    }
+  ]
+}

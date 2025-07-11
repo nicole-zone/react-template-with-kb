@@ -1,0 +1,45 @@
+# 公共知识
+
+## 项目结构
+
+#### 项目主要目录结构
+- assets: 静态资源（图片/文件类的）
+- components: 公共组件
+- const: 常量或环境变量
+- hooks: 公共 hooks
+- pages: 系统各模块的页面，单个模块的规范目录结构参考 src/pages/ProviderManage 按照独立组件拆分不同文件放到当前模块目录下，类型和常量也放到当前模块目录中，自定义 api 接口放到 src/api 目录下
+- provider: 项目共用的 provider/context，偏全局的状态管理
+- routes: 页面路由配置
+- types: 类型声明文件
+- utils: 工具方法
+- swagger-generator-typescript.json: swagger api docs 链接，swagger-generator-typescript 会根据这个链接拉取 api 数据，并生成项目 api 文档
+- swagger-api: 使用 swagger-generator-typescript 生成的 api 文档（yarn swagger 即可自动更新）
+- api: 自定义的请求（不是由 swagger-generator-typescript 生成的 api 接口）
+- .knowledge: 项目知识库，包括项目背景、规范、公共知识等
+
+#### 技术栈
+- node版本：>= 16.8.0
+- UI库：react 17.0.2
+- 组件库：、[Antd 5.24.7](mdc:https:/ant.design/components/overview-cn)
+- 包管理工具：yarn >= 1.22.22
+- 网络请求工具: axios 0.26.1、 [useInitialRequest](mdc:src/hooks/useInitialRequest.ts)、[useSwaggerApi](mdc:src/hooks/useSwaggerApi.ts)、[useSwaggerInitialRequest](mdc:src/hooks/useInitialRequest.ts)
+
+
+#### knowledge 部分
+
+- .knowledge 目录下存放项目中所有知识, 是 AI 需要重视的项目知识
+- .knowledge/rules 是项目所有的规范，需要严格遵守
+- .knowledge/common 目录存放的是项目中公共的知识
+- .knowledge/common 目录下的 actions 目录交代了一些项目生命周期的操作，当用户说执行{actionName}时，尝试在 actions 目录下找到对应的 {actionName}.{mdx|sh} 文件
+  - 如果是 mdx 文件，则读取其内容，并在终端执行相关命令实现其功能
+  - 如果是 sh 文件，则直接在终端执行该脚本
+- .knowledge 下除 common 外的目录往往代表一个页面(领域)的知识, 子目录下的 index.mdx 交代其领域知识
+- .knowledge/common 目录下的 git.mdx 文件交代了 git 相关的规范
+- .knowledge/common 目录下的 cli.mdx 文件交代了 AI agent 生成 cli 命令时的规范
+- .knowledge/features 目录存放的是项目正在进行迭代和已经完成的功能
+- features 目录下的 done 目录存放的是已经完成的功能，可以作为历史知识的参考
+- features 目录下 doing 目录存放的是正在进行的功能，是项目中正在迭代的知识
+- features 下 done 和 doing 的目录下的需求文件都是一个目录，目录名是"需求时间-需求名称"，需求时间的格式为"YYYYMMDD"
+- 如果一个领域知识存在多个描述，应该以"需求时间"最晚的为准
+- 一个 feature 对应的目录下有 index.mdx 文件，描述了需求的背景，需求，技术实现等
+- 一个 feature 对应的目录下可能有 prd 和 ui 两个目录，分别存放这个 feature 对应的 prd 和 ui 设计稿
