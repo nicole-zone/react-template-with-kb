@@ -2,7 +2,7 @@ import { OpenAIOutlined, PieChartOutlined } from '@ant-design/icons';
 
 import PageAIndexPage from '@/pages/page-a';
 import ChildOneIndexPage from '@/pages/page-b/ChildOneIndexPage';
-import CityManagementPage from '@/pages/city-management';
+import CityManagementIndexPage from '@/pages/city-management';
 
 export interface IRoute {
   /** 页面组件 */
@@ -50,6 +50,6 @@ export const RoutesList: IRoute[] = [
     key: 'city-management',
     path: '/city-management',
     icon: <PieChartOutlined />,
-    element: <CityManagementPage />,
+    element: <CityManagementIndexPage />,
   },
 ];

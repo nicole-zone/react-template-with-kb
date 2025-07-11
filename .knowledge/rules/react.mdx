@@ -1,11 +1,12 @@
 # React 规则
 
 ## 组件结构
+- 组件均需用 React.FC 声明
 - 优先使用函数组件而非类组件
 - 保持组件小巧且专注
 - 将可复用逻辑提取到自定义 hook 中
 - 使用组合而非继承
-- 使用 TypeScript 实现适当的 prop 类型
+- 使用 TypeScript 实现的 prop 类型，不必单独提出来一个类型，直接在组件中实现
 - 将大型组件拆分为更小、更专注的组件
 
 ## Hooks
@@ -58,4 +59,4 @@
 - 保持样式靠近组件
 - 使用适当的导入/导出
 - 记录复杂的组件逻辑
-- FC中按照： hooks、state、useMemo、useCallback、function、useEffect、return 的顺序组织代码
+- 组件中按照： hooks、useState、useMemo、useCallback、function、useEffect、return 的顺序组织代码

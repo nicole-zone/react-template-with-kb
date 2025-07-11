@@ -10,7 +10,7 @@
 - pages: 系统各模块的页面，单个模块的规范目录结构参考 src/pages/ProviderManage 按照独立组件拆分不同文件放到当前模块目录下，类型和常量也放到当前模块目录中，自定义 api 接口放到 src/api 目录下
 - provider: 项目共用的 provider/context，偏全局的状态管理
 - routes: 页面路由配置
-- types: 类型声明文件
+- types: 类型声明
 - utils: 工具方法
 - swagger-generator-typescript.json: swagger api docs 链接，swagger-generator-typescript 会根据这个链接拉取 api 数据，并生成项目 api 文档
 - swagger-api: 使用 swagger-generator-typescript 生成的 api 文档（yarn swagger 即可自动更新）
@@ -26,7 +26,6 @@
 
 
 #### knowledge 部分
-
 - .knowledge 目录下存放项目中所有知识, 是 AI 需要重视的项目知识
 - .knowledge/rules 是项目所有的规范，需要严格遵守
 - .knowledge/common 目录存放的是项目中公共的知识
